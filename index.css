@@ -2,7 +2,8 @@
 {
     width:80%;
     margin-left: 10%;
-    border: 2px solid red;
+    /* I am commenting unwanted css*/
+    /*border: 2px solid red;*/
 }
 
 header
@@ -30,4 +31,104 @@ header
 #banner img
 {
     width:100%;
+}
+
+menu
+{
+    width:100%;
+    margin-left: 15%;
+    margin-top: 2%;
+    /*border:2px solid green;*/
+}
+
+menu ul li
+ {
+     display: inline;
+     list-style: none;
+     font-size: x-large;
+     font-weight: bold;
+     color: black;
+     margin-right: 8%;
+ }
+menu ul li a
+{
+    text-decoration: none;
+    color: black;
+}
+menu ul li a:hover
+{
+    background-color: black;
+    color: white;
+
+}
+
+.content
+{
+  width:100%;
+}
+
+#news
+{
+  width:100%;
+  border: 3px double black;
+  margin-bottom: 3%;
+
+}
+#news p{
+    text-align: justify;
+    font-size: medium;
+    font-weight: bold;
+    -webkit-column-count: 5;
+    -webkit-column-gap: 15px;
+    -webkit-column-rule: 5px dotted red;
+    -moz-column-count: 3;
+    -moz-column-gap: 15px;
+    -moz-column-rule: 5px dotted red;
+}
+
+#news P:first-letter
+{
+    font-size: xx-large;
+    color: green;
+}
+#news P:first-line
+{
+    font-size: x-large;
+    color: red;
+}
+
+#news header h4
+{
+    color: black;
+    font-size: large;
+    font-weight: bold;
+    font-family: "Lucida Calligraphy";
+}
+#news footer h4
+{
+    color: black;
+    font-size: small;
+    font-weight: bold;
+    font-family: "Lucida Calligraphy";
+}
+#aboutUs
+{
+  width:100%;
+    border: 3px double black;
+}
+
+#aboutUs figure
+{
+    width:25%;
+    float: left;
+}
+#aboutUs figure img
+{
+    width:100%;
+}
+#aboutUs p
+{
+    width:40%;
+    margin-left: 40%;
+    text-align: justify;
 }
