@@ -1,0 +1,36 @@
+#videoArea
+{
+    width:30%;
+    margin-left: 5%;
+    border: 5px double blue;
+    float: left;
+}
+
+#adv
+{
+    width: 20%;
+    margin-left: 45%;
+
+}
+
+#adv img
+{
+    width:150%;
+    height: 240px;
+}
+#poster
+{
+    width:80%;
+    margin-left: 5%;
+    display: inline;
+
+}
+
+#poster img
+{
+    width:20%;
+    height: 200px;
+    margin-right: 3%;
+    margin-top: 5%;
+    border: 2px solid red;
+}
