@@ -100,6 +100,27 @@ window.addEventListener('load',function()
         var email=document.getElementById("email").value;
         var country =document.getElementById("country").value;
         var gender= document.querySelector('input[name="gender"]:checked').value;
+        //reading image
+        var photoRef=document.getElementById("photo");
+        //to verify file type
+        var fileType=/image.*/;
+       //number of files
+       var totalFiles=photoRef.files.length;
+       console.log(totalFiles);
+       for(var i=0;i<totalFiles;i++)
+       {
+
+           if(photoRef.files[i].type.match(fileType)) {
+               console.log("Image file");
+               store(i,photoRef.files[i]);
+
+           }
+
+       }
+
+
+
+
 
         window.localStorage.setItem("FirstName", firstName);
         window.localStorage.setItem("LastName", lastName);
@@ -115,6 +136,20 @@ window.addEventListener('load',function()
         console.log("Country"+"->"+country);
         console.log("Gender"+"->"+gender);
     });
+
+
+    function store(i,file)
+    {
+        var fileReader=new FileReader();
+        fileReader.readAsDataURL(file);
+        fileReader.onload=function()
+        {
+            window.localStorage.setItem("photo"+i,fileReader.result);
+
+        }
+    }
+
+
 
     //stop refreshing the page
   // return false;
