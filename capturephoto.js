@@ -98,6 +98,22 @@ function capturePhoto() {
 // Trigger photo take
     document.getElementById("startbutton").addEventListener("click", function() {
         context.drawImage(video, 0, 0, 640, 480);
+       //context.toDataURL("image/png");
+        var img = new Image();
+        var output= document.getElementById("output");
+        img.addEventListener("load", function () {
+            context.drawImage(img, 0, 0, 600, 200);
+            // Get canvas content as a base64 image
+            var base64Img = context.toDataURL("image/png");
+            console.log(base64Img);
+            output.appendChild(img);
+            window.localStorage.setItem("photo",base64Img);
+        }, false);
+
+        img.setAttribute("src", "view.jpg");
+
+        console.log("file saved");
+
     });
 
 
